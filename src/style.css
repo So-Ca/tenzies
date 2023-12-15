@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0A2433;
+  padding: 20px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 700px;
+  max-height: 900px;
+  border-radius: 10px;
+  background: #F5F5F5;
+}
+
+.title{
+  margin: 0;
+  font-size: 3em;
+  font-family: "Karla";
+  font-weight: bolder;
+}
+
+.instruction{
+  margin: 1% 15%;
+  font-size: 1.2em;
+  font-family: "Karla";
+  text-align: center;
+}
+
+.win{
+  margin: 2% auto;
+  font-size: 1.8em;
+  font-family: "Karla";
+  color: rgb(224, 148, 5);
+  text-shadow: 1px 1px 1px rgb(224, 5, 5);
+}
+
+.dice-container{
+  margin: 0;
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
+}
+
+.die-face{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 5px 3px rgb(165, 165, 165);
+  cursor: pointer;
+}
+
+.dice-num{
+  font-size: 1.5em;
+  font-family: "Karla";
+}
+
+.roll-btn{
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background: #4028E7;
+  box-shadow: 0 3px 3px rgb(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 1.5em;
+  font-family: "Karla";
+}
+.roll-btn:hover{
+  cursor: pointer;
+  box-shadow: 3px 5px 3px rgb(0, 0, 0);
+}
+.roll-btn:active{
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
