@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react"
 import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
 import Die from "./components/Die"
-import "./style.css"
 
 function App(){
 
@@ -26,7 +25,7 @@ function App(){
   function generateNewDice(){
     return {
       id: nanoid(),
-      value: Math.floor( Math.random() * 6 ), // errore: ho messo allNewDice invece che math
+      value: Math.floor( Math.random() * 6 ),
       isHeld: false
     }
   }
@@ -34,7 +33,7 @@ function App(){
   function allNewDice(){
     const newDice = []
     for(let i=0; i<10; i++ ){
-      newDice.push( generateNewDice() ) // errore: ho pushato math invece che generateNewDice
+      newDice.push( generateNewDice() )
     }
     return newDice
   }
@@ -51,7 +50,7 @@ function App(){
       setEndTime( Date.now() / 1000000000000 )
     } else {
       setNumber( prevNum => prevNum.map( die => (
-        die.isHeld ? die : generateNewDice() // errore: non mi ricordavo come impostare il ternary
+        die.isHeld ? die : generateNewDice()
       )))
       setRolls( rolls + 1 )
     }
@@ -64,7 +63,7 @@ function App(){
     )
   }
 
-  useEffect( () => { // errore: non mi ricordavo come impostare le costanti
+  useEffect( () => {
     const firstValue = numbers[0].value
     const allSameValue = numbers.every( die => die.value === firstValue)
     const allHeld = numbers.every( die => die.isHeld)
