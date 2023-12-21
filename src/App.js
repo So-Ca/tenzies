@@ -75,7 +75,7 @@ function App(){
         localStorage.setItem("bestTime", time.toFixed(2))
       }
     }
-  }, [numbers])
+  }, [numbers, bestTime, time])
 
   return(
     <main>
